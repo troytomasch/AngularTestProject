@@ -3,4 +3,5 @@
   <img [src]="item.image" />
   <p>Price: {{ item.price }}</p>
   <p>Available: {{ item.available ? "Yes" : "No" }}</p>
+  <a [routerLink]="['/item', item.id]">View Item</a>
 </div>
