@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { StoreItem } from './interfaces/storeitem';
+import { Suggestion } from './interfaces/suggestion';
 
 @Injectable({
   providedIn: 'root',
@@ -53,6 +54,12 @@ export class StoreItemsService {
 
   getItemById(id: Number): StoreItem | undefined {
     return this.items.find((storeItem) => storeItem.id === id);
+  }
+
+  submitSuggestion(suggestion: Suggestion) {
+    console.log(
+      `${suggestion.name} commented that ${suggestion.comment} and they rated the website a ${suggestion.websiteRating}`
+    );
   }
 
   constructor() {}

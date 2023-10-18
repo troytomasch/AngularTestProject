@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ItemCardComponent } from '../item-card/item-card.component';
 import { StoreItem } from '../interfaces/storeitem';
 import { StoreItemsService } from '../storeitemsservice.service';
+import { SuggestionComponent } from '../suggestion/suggestion.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, ItemCardComponent],
+  imports: [CommonModule, ItemCardComponent, SuggestionComponent],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })

@@ -1,0 +1,37 @@
+<form
+  [formGroup]="suggestionForm"
+  (submit)="submitSuggestion()"
+  class="suggestionForm"
+>
+  <div class="formEntry">
+    <label for="name">Name: </label>
+    <input id="name" type="text" formControlName="name" />
+  </div>
+
+  <div class="formEntry">
+    <label for="comment">Comment: </label>
+    <input id="comment" type="text" formControlName="comment" />
+  </div>
+
+  <div class="formEntry">
+    <label for="rating">Website Rating: </label>
+    <input
+      id="rating"
+      type="number"
+      formControlName="websiteRating"
+      max="10"
+      min="0"
+    />
+  </div>
+
+  <div class="formEntry">
+    <label for="previousVisitor">Have you been to this site before: </label>
+    <input
+      id="previousVisitor"
+      type="checkbox"
+      formControlName="repeatVisitor"
+    />
+  </div>
+
+  <button type="submit">Submit Suggestion</button>
+</form>
