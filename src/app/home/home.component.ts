@@ -15,6 +15,11 @@ import { SuggestionComponent } from '../suggestion/suggestion.component';
 export class HomeComponent {
   items: StoreItem[] = [];
   storeItemsService: StoreItemsService = inject(StoreItemsService);
+  counter: number = 0;
+
+  add(num: number) {
+    this.counter += num;
+  }
 
   constructor() {
     this.items = this.storeItemsService.getAllItems();

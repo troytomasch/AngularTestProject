@@ -4,4 +4,5 @@
   <p>Price: {{ item.price }}</p>
   <p>Available: {{ item.available ? "Yes" : "No" }}</p>
   <a [routerLink]="['/item', item.id]">View Item</a>
+  <button (click)="addToCount()">Add to counter</button>
 </div>

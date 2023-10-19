@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { StoreItem } from '../interfaces/storeitem';
 import { RouterModule } from '@angular/router';
@@ -12,4 +12,9 @@ import { RouterModule } from '@angular/router';
 })
 export class ItemCardComponent {
   @Input() item!: StoreItem;
+  @Output() addToCounter = new EventEmitter<number>();
+
+  addToCount() {
+    this.addToCounter.emit(2);
+  }
 }

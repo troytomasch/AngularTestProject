@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
 import { StoreItem } from '../interfaces/storeitem';
 import { StoreItemsService } from '../storeitemsservice.service';
+import { BackwardsPipe } from '../backwards.pipe';
 
 @Component({
   selector: 'app-details',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, BackwardsPipe],
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css'],
 })

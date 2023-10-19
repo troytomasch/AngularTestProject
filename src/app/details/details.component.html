@@ -2,4 +2,5 @@
 <img [src]="storeItem?.image" />
 <p>Price: {{ storeItem?.price }}</p>
 <p>Available: {{ storeItem?.available ? "Yes" : "No" }}</p>
+<p>Product name but backwards: {{ storeItem?.name | backwards }}</p>
 <p>{{ storeItem?.description }}</p>
